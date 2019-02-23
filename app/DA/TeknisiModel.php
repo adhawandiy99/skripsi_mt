@@ -37,7 +37,7 @@ class TeknisiModel
         ]);
       }
       DB::table(self::TABLE)
-      ->where("ID_Sys" , $id)
+      ->where("ID_Sistem" , $id)
       ->update([
           "Username" => $req->Username,
           "Nama" => $req->Nama,

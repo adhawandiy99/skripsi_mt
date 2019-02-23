@@ -45,4 +45,8 @@ class OrderModel
       ]);
     }
   }
+  public static function inbox($id)
+  {
+    return DB::table(self::TABLE)->select(self::TABLE.'.*')->leftJoin('Teknisi', self::TABLE.'.Teknisi_ID', '=', 'Teknisi.ID_Sistem')->where('Teknisi.ID_Sistem', $id)->get();
+  }
 }

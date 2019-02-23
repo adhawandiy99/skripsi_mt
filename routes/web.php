@@ -33,4 +33,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/material/{id}','MaterialController@input');
     Route::post('/material/{id}','MaterialController@save');
     Route::post('/deleteMaterial/{id}','MaterialController@delete');
+
+    //inbox teknisi
+    Route::get('/inbox_order','TeknisiController@inbox');
+    Route::get('/getDetail/{id}','OrderController@detail');
+    Route::get('/progress/{id}','OrderController@progress');
+    Route::post('/progress/{id}','OrderController@saveprogress');
 });

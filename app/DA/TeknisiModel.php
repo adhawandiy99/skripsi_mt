@@ -59,4 +59,6 @@ class TeknisiModel
   {
     return DB::table(self::TABLE)->select('*', 'ID_Sistem as id', 'Nama as text')->get();
   }
+
+  //laporan teknisi
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use App\DA\TeknisiModel;
+use App\DA\OrderModel;
 
 class TeknisiController extends Controller
 {
@@ -25,4 +26,12 @@ class TeknisiController extends Controller
 		$data = TeknisiModel::delete($id);
 		return redirect('/teknisi');
 	}
+	
+	//laporan teknisi
+	public function inbox(){
+		$data = OrderModel::inbox(session('auth')->ID_Sistem);
+		//dd($data);	
+		return view('teknisi.inboxteknisi', compact('data'));
+	}
+
 }

@@ -1,5 +1,9 @@
+## Install
+1. xampp
+2. composser
+
 ## 01 Download source code dari Bitbucket
-buka cmd dan ke working diretory kita, ketikkan command berikut :
+buka cmd dan ke working directory kita, ketikkan command berikut :
 ```
 git clone --depth 1 https://github.com/adhawandiy99/skripsi_mt.git
 ```
@@ -25,6 +29,7 @@ buka file `.env`, edit DB_USERNAME dan DB_PASSWORD sesuaikan dengan akun login p
 
 ```
 php artisan key:generate
+php artisan migrate
 ```
 
 ## 04 Menjalankan Aplikasi

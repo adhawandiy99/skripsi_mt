@@ -2,6 +2,7 @@
 1. xampp
 2. composser
 
+jalankan xampp, centang `apache` dan `mysql`
 ## 01 Download source code dari Bitbucket
 buka cmd dan ke working directory kita, ketikkan command berikut :
 ```
@@ -38,3 +39,5 @@ ketikkan command ini:
 php artisan serve
 
 ```
+
+buka browser ketik `localhost:8000`

@@ -39,4 +39,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/getDetail/{id}','OrderController@detail');
     Route::get('/progress/{id}','OrderController@progress');
     Route::post('/progress/{id}','OrderController@saveprogress');
+
+    //report
+    Route::get('/report1','ReportController@index');
+    Route::get('/printpdf/{id}','ReportController@pdf');
 });

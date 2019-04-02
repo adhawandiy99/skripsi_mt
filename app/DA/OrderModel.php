@@ -9,7 +9,7 @@ class OrderModel
 	const TABLE = 'master_order';
 	public static function getOrderById($id)
   {
-    return DB::table(self::TABLE)->where('ID_Sistem', $id)->first();
+    return DB::table(self::TABLE)->select(self::TABLE.'.*', 'Teknisi.Nama')->leftJoin('Teknisi', self::TABLE.'.Teknisi_ID', '=', 'Teknisi.ID_Sistem')->where(self::TABLE.'.ID_Sistem', $id)->first();
   }
   public static function getAll()
   {

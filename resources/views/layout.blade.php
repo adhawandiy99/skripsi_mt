@@ -78,9 +78,6 @@
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#px-navbar-collapse" aria-expanded="false"><i class="navbar-toggle-icon"></i></button>
 
     <div class="collapse navbar-collapse" id="px-navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></a>
-      </ul>
 
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

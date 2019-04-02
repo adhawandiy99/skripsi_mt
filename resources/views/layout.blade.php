@@ -33,26 +33,32 @@
     </button>
 
     <ul class="px-nav-content">
-      <li class="px-nav-item px-nav-dropdown">
+      @if(session('auth')->Level == 1)
+      <li class="px-nav-item px-nav-dropdown {{ str_contains(Request::segment(1), ['teknisi', 'material', 'order'])?'px-open active':'' }}">
         <a href="#"><i class="px-nav-icon ion-ios-plus"></i><span class="px-nav-label">Admin</span></a>
         <ul class="px-nav-dropdown-menu">
-          <li class="px-nav-item"><a href="/teknisi"><span class="px-nav-label">Teknisi</span></a></li>
-          <li class="px-nav-item"><a href="/material"><span class="px-nav-label">Material</span></a></li>
-          <li class="px-nav-item"><a href="/order"><span class="px-nav-label">Order</span></a></li>
+          <li class="px-nav-item {{ Request::segment(1)=='teknisi'?'active':'' }}"><a href="/teknisi"><span class="px-nav-label">Teknisi</span></a></li>
+          <li class="px-nav-item {{ Request::segment(1)=='material'?'active':'' }}"><a href="/material"><span class="px-nav-label">Material</span></a></li>
+          <li class="px-nav-item {{ Request::segment(1)=='order'?'active':'' }}"><a href="/order"><span class="px-nav-label">Order</span></a></li>
         </ul>
       </li>
-      <li class="px-nav-item px-nav-dropdown">
+      @endif
+      @if(session('auth')->Level == 2)
+      <li class="px-nav-item px-nav-dropdown {{ str_contains(Request::segment(1), ['inbox_order'])?'px-open active':'' }}">
         <a href="#"><i class="px-nav-icon ion-iphone"></i><span class="px-nav-label">Teknisi</span></a>
         <ul class="px-nav-dropdown-menu">
-          <li class="px-nav-item"><a href="/inbox_order"><span class="px-nav-label">Inbox Order</span></a></li>
+          <li class="px-nav-item {{ Request::segment(1)=='inbox_order'?'active':'' }}"><a href="/inbox_order"><span class="px-nav-label">Inbox Order</span></a></li>
         </ul>
       </li>
-      <li class="px-nav-item px-nav-dropdown">
+      @endif
+      @if(session('auth')->Level == 3 || session('auth')->Level == 1)
+      <li class="px-nav-item px-nav-dropdown {{ str_contains(Request::segment(1), ['report1'])?'px-open active':'' }}">
         <a href="#"><i class="px-nav-icon ion-clipboard"></i><span class="px-nav-label">Reporting</span></a>
         <ul class="px-nav-dropdown-menu">
-          <li class="px-nav-item"><a href="/report1"><span class="px-nav-label">Report1</span></a></li>
+          <li class="px-nav-item {{ Request::segment(1)=='report1'?'active':'' }}"><a href="/report1"><span class="px-nav-label">Report1</span></a></li>
         </ul>
       </li>
+      @endif
       <li class="px-nav-item px-nav-dropdown">
         <a href="#"><i class="px-nav-icon ion-ios-person"></i><span class="px-nav-label">{{ session('auth')->Username }} </span></a>
 

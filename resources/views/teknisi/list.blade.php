@@ -15,7 +15,9 @@
 	      <tr>
 	        <th>#</th>
 	        <th>Username</th>
+	        <th>Nik</th>
 	        <th>Nama</th>
+	        <th>No. Hp</th>
 	        <th>Action</th>
 	      </tr>
 	    </thead>
@@ -24,7 +26,9 @@
 	      <tr>
 	        <th scope="row">{{ ++$no }}</th>
 	        <td>{{ $d->Username }}</td>
+	        <td>{{ $d->NIK }}</td>
 	        <td>{{ $d->Nama }}</td>
+	        <td>{{ $d->No_HP }}</td>
 	        <td>
 	        	<a href="/teknisi/{{ $d->ID_Sistem }}">
 	        		<button type="button" class="btn btn-success btn-outline btn-rounded btn-xs">

@@ -28,9 +28,21 @@
 	    </div>
 	  </div>
 	  <div class="form-group form-group-lg">
+	    <label for="NIK" class="col-md-3 control-label">NIK</label>
+	    <div class="col-md-9">
+	      <input type="text" name="NIK" class="form-control" id="NIK" placeholder="NIK" value="{{ isset($data->NIK) ? $data->NIK : '' }}">
+	    </div>
+	  </div>
+	  <div class="form-group form-group-lg">
 	    <label for="Nama" class="col-md-3 control-label">Nama</label>
 	    <div class="col-md-9">
 	      <input type="text" name="Nama" class="form-control" id="Nama" placeholder="Nama" value="{{ isset($data->Nama) ? $data->Nama : '' }}">
+	    </div>
+	  </div>
+	  <div class="form-group form-group-lg">
+	    <label for="No_HP" class="col-md-3 control-label">No. HP</label>
+	    <div class="col-md-9">
+	      <input type="text" name="No_HP" class="form-control" id="No_HP" placeholder="No_HP" value="{{ isset($data->No_HP) ? $data->No_HP : '' }}">
 	    </div>
 	  </div>
 	  <div class="form-group form-group-lg">
@@ -52,10 +64,10 @@
 @section('js')
 <script type="text/javascript">
   $(function() {
-    $('#level').select2({
+    $('#Level').select2({
       placeholder: 'Select',
       dropdownCssClass : 'no-search',
-      data: [{"id":"1","text":"Admin"},{"id":"2","text":"Teknisi"}],
+      data: [{"id":"1","text":"Admin"},{"id":"2","text":"Teknisi"},{"id":"3","text":"Pimpinan"}],
       multiple:false
     });
 	});

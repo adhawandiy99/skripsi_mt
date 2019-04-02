@@ -40,7 +40,9 @@ class TeknisiModel
       ->where("ID_Sistem" , $id)
       ->update([
           "Username" => $req->Username,
+          "NIK" => $req->NIK,
           "Nama" => $req->Nama,
+          "No_HP" => $req->No_HP,
           "Level" => $req->Level
       ]);
       
@@ -49,7 +51,9 @@ class TeknisiModel
       ->insert([
           "Username" => $req->Username,
           "Password" => MD5($req->Password),
+          "NIK" => $req->NIK,
           "Nama" => $req->Nama,
+          "No_HP" => $req->No_HP,
           "Level" => $req->Level
       ]);
     }

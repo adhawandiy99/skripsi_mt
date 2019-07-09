@@ -87,7 +87,7 @@
       $('#Status').select2({
         placeholder: 'Select Status',
         dropdownCssClass : 'no-search',
-        data: [{"id":"OGP", "text" : "OGP"},{"id":"Selesai", "text" : "Selesai"},{"id":"Kendala", "text" : "Kendala"},{"id":"Pending", "text" : "Pending"}]
+        data: [{"id":"OGP", "text" : "OGP"},{"id":"Selesai", "text" : "Selesai"},{"id":"Pending", "text" : "Pending"}]
       }).change(function() {
         $(this).valid();
       });

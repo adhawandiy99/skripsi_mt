@@ -43,4 +43,9 @@ class MaterialModel
       ]);
     }
   }
+
+  public static function getReport()
+  {
+    return DB::table(self::TABLE)->select('*', DB::raw('(select sum(Quantity) from pemakaian_mtr where Material_ID = material.ID_Sistem) as Total'))->get();
+  }
 }

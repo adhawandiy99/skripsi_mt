@@ -15,6 +15,10 @@ class ReportController extends Controller
 		$data = OrderModel::getAll();
 		return view('report.report1', compact('data'));
 	}
+	public function rekapMaterial(){
+		$data = MaterialModel::getReport();
+		return view('report.report2', compact('data'));
+	}
 	public function pdf($id){
 		$data = OrderModel::getOrderById($id);
 		$mtr = MaterialModel::getMaterialByOrderId($id);

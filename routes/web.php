@@ -42,5 +42,6 @@ Route::group(['middleware' => 'auth'], function() {
 
     //report
     Route::get('/report1','ReportController@index');
+    Route::get('/report2','ReportController@rekapMaterial');
     Route::get('/printpdf/{id}','ReportController@pdf');
 });

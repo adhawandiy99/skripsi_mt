@@ -56,6 +56,7 @@
         <a href="#"><i class="px-nav-icon ion-clipboard"></i><span class="px-nav-label">Reporting</span></a>
         <ul class="px-nav-dropdown-menu">
           <li class="px-nav-item {{ Request::segment(1)=='report1'?'active':'' }}"><a href="/report1"><span class="px-nav-label">Report1</span></a></li>
+          <li class="px-nav-item {{ Request::segment(1)=='report2'?'active':'' }}"><a href="/report2"><span class="px-nav-label">Report2</span></a></li>
         </ul>
       </li>
       @endif
